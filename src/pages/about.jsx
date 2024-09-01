@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import { DarkMode } from "../context/darkModeContext";
 import Fade from "react-reveal/Fade";
+import { useEffect } from "react";
 const AboutPage = () => {
   const { isDarkMode, setIsDarkMode } = useContext(DarkMode);
+
   return (
     <div className="w-full p-3 ">
       <div className="w-full flex justify-around gap-4 max-sm:flex-col">
@@ -21,7 +23,7 @@ const AboutPage = () => {
               About Me
             </h1>
           </Fade>
-          <Fade right delay={500}>
+          <Fade bottom delay={500}>
             <p
               className={`text-xl font-poppins text-shadow-sm max-sm:mb-20 ${
                 isDarkMode ? "text-white" : "text-black"

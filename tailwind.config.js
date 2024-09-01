@@ -21,6 +21,14 @@ export default {
       colors: {
         neo: "#e0e0e0",
       },
+      width: {
+        p75: "75px",
+        p60: "60px",
+      },
+      height: {
+        p75: "75px",
+        p60: "60px",
+      },
     },
   },
   plugins: [require("tailwindcss-textshadow")],
