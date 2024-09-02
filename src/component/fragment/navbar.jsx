@@ -3,6 +3,7 @@ import { DarkMode } from "../../context/darkModeContext";
 import { Link } from "react-router-dom";
 import DarkModeToggle from "./darkModeToggle";
 import { useRef } from "react";
+import CommingSoon from "../element/comming";
 
 const NavbarPages = (props) => {
   const { aboutRef, skillsRef } = props;
@@ -11,6 +12,7 @@ const NavbarPages = (props) => {
   const [home, setHome] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [iscomming, setIsComming] = useState(false);
 
   const windowRef = useRef(null);
   const navRef = useRef(null);
@@ -78,6 +80,10 @@ const NavbarPages = (props) => {
     setNavbar(false);
   };
 
+  const handleComming = () => {
+    setIsComming(true);
+  };
+
   return (
     <>
       <div
@@ -112,12 +118,14 @@ const NavbarPages = (props) => {
             Skills
           </p>
 
-          <Link>
-            <p>Portfolio</p>
-          </Link>
-          <Link>
-            <p>Contact</p>
-          </Link>
+          <p onClick={handleComming} className="cursor-pointer">
+            Portfolio
+          </p>
+
+          <p onClick={handleComming} className="cursor-pointer">
+            Contact
+          </p>
+
           <i
             className="fa-regular fa-circle-xmark hidden text-3xl max-sm:block max-sm:absolute max-sm:top-1 max-sm:right-1"
             onClick={() => setNavbar(false)}
@@ -140,6 +148,7 @@ const NavbarPages = (props) => {
       >
         <i className="fa-solid fa-house text-xl"></i>
       </div>
+      {iscomming && <CommingSoon setIsComming={setIsComming} />}
     </>
   );
 };

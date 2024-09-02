@@ -6,6 +6,7 @@ import { Tilt } from "react-tilt";
 import AboutPage from "./about";
 import Fade from "react-reveal/Fade";
 import SkillsPage from "./skills";
+import FooterPage from "../component/fragment/footer";
 
 const HomePages = () => {
   const { isDarkMode, setIsDarkMode } = useContext(DarkMode);
@@ -20,10 +21,17 @@ const HomePages = () => {
     transition: true,
   };
 
+  const handleMore = () => {
+    window.scrollTo({
+      top: aboutRef.current.offsetTop,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div
       className={`w-full ${isDarkMode ? "bg-slate-700" : "bg-sky-100"}`}
-      style={{ minHeight: "3000px" }}
+      // style={{ minHeight: "3000px" }}
     >
       <NavbarPages aboutRef={aboutRef} skillsRef={skillsRef}></NavbarPages>
       <div
@@ -65,7 +73,10 @@ const HomePages = () => {
                 To find out more about me, please scroll down or click this
                 button
               </p>
-              <button className="text-xl font-poppins p-3 bg-orange-300 hover:bg-lime-300 active:bg-cyan-500 active:border-2 active:border-red-500 rounded-lg text-white">
+              <button
+                className="text-xl font-poppins p-3 bg-orange-300 hover:bg-lime-300 active:bg-cyan-500 active:border-2 active:border-red-500 rounded-lg text-white"
+                onClick={handleMore}
+              >
                 Learn More
               </button>
             </div>
@@ -87,6 +98,7 @@ const HomePages = () => {
       <div ref={skillsRef} className="my-20">
         <SkillsPage></SkillsPage>
       </div>
+      <FooterPage></FooterPage>
     </div>
   );
 };

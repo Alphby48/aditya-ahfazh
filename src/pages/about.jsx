@@ -2,8 +2,11 @@ import { useContext } from "react";
 import { DarkMode } from "../context/darkModeContext";
 import Fade from "react-reveal/Fade";
 import { useEffect } from "react";
+import { useState } from "react";
+import CommingSoon from "../component/element/comming";
 const AboutPage = () => {
   const { isDarkMode, setIsDarkMode } = useContext(DarkMode);
+  const [iscomming, setIsComming] = useState(false);
 
   return (
     <div className="w-full p-3 ">
@@ -39,16 +42,23 @@ const AboutPage = () => {
           </Fade>
           <Fade bottom delay={500}>
             <div className="flex max-sm:justify-around gap-3">
-              <button className="text-lg font-poppins p-3 bg-orange-300 hover:bg-lime-300 active:bg-cyan-500 active:border-2 active:border-red-500 rounded-md text-white">
+              <button
+                className="text-lg font-poppins p-3 bg-orange-300 hover:bg-lime-300 active:bg-cyan-500 active:border-2 active:border-red-500 rounded-md text-white"
+                onClick={() => setIsComming(true)}
+              >
                 Hire Me
               </button>
-              <button className="text-lg font-poppins p-3 border-2 border-orange-300 hover:bg-lime-300 hover:text-slate-50 active:bg-cyan-500 active:border-2 active:border-red-500 rounded-md text-orange-300">
+              <button
+                className="text-lg font-poppins p-3 border-2 border-orange-300 hover:bg-lime-300 hover:text-slate-50 active:bg-cyan-500 active:border-2 active:border-red-500 rounded-md text-orange-300"
+                onClick={() => setIsComming(true)}
+              >
                 Download CV
               </button>
             </div>
           </Fade>
         </div>
       </div>
+      {iscomming && <CommingSoon setIsComming={setIsComming} />}
     </div>
   );
 };

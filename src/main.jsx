@@ -7,6 +7,7 @@ import store from "./redux/store.js";
 import "./style.css";
 import HomePages from "./pages/home.jsx";
 import WebDevSkillPage from "./pages/webdevskill.jsx";
+import NetworkSkillPage from "./pages/networkSkill.jsx";
 import NotFoundPage from "./pages/notFound.jsx";
 
 const router = createBrowserRouter([
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: "/skills/web-developer",
     element: <WebDevSkillPage />,
+  },
+  {
+    path: "/skills/network-enginer",
+    element: <NetworkSkillPage />,
   },
   {
     path: "*",
