@@ -87,7 +87,7 @@ const Languages = [
     id: 15,
     name: "Vite.js",
     img: "/language/vite.svg",
-    type: "tool",
+    type: "framework and library",
   },
   {
     id: 16,

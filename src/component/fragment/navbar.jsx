@@ -138,7 +138,7 @@ const NavbarPages = (props) => {
         } justify-center items-center rounded-full bg-orange-100 cursor-pointer z-20`}
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       >
-        <i class="fa-solid fa-house text-xl"></i>
+        <i className="fa-solid fa-house text-xl"></i>
       </div>
     </>
   );

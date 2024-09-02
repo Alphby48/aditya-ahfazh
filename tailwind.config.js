@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      backgroundColor: {
+        pop: "#cfd3d7c7",
+      },
       backgroundImage: {
         bgjar: "url('/img/bg-3.jpg')",
         dev: "url('https://futureskillsprime.in//sites/default/files/2021-04/web-development.jpg')",
