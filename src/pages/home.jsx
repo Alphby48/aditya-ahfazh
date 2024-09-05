@@ -7,11 +7,15 @@ import AboutPage from "./about";
 import Fade from "react-reveal/Fade";
 import SkillsPage from "./skills";
 import FooterPage from "../component/fragment/footer";
+import PortfolioPage from "./portprofle";
+import ContactPage from "./contact";
 
 const HomePages = () => {
   const { isDarkMode, setIsDarkMode } = useContext(DarkMode);
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
+  const portfolioRef = useRef(null);
+  const contactRef = useRef(null);
 
   const defaultOptions = {
     reverse: false,
@@ -33,7 +37,12 @@ const HomePages = () => {
       className={`w-full ${isDarkMode ? "bg-slate-700" : "bg-sky-100"}`}
       // style={{ minHeight: "3000px" }}
     >
-      <NavbarPages aboutRef={aboutRef} skillsRef={skillsRef}></NavbarPages>
+      <NavbarPages
+        aboutRef={aboutRef}
+        skillsRef={skillsRef}
+        portfolioRef={portfolioRef}
+        contactRef={contactRef}
+      ></NavbarPages>
       <div
         className={`relative w-full min-h-screen bg-bgjar bg-fixed bg-center bg-no-repeat bg-cover after:absolute after:-bottom-4 after:left-0 after:right-0 after:h-10 after:bg-gradient-to-b ${
           isDarkMode
@@ -97,6 +106,12 @@ const HomePages = () => {
       </div>
       <div ref={skillsRef} className="my-20">
         <SkillsPage></SkillsPage>
+      </div>
+      <div ref={portfolioRef} className="my-20">
+        <PortfolioPage></PortfolioPage>
+      </div>
+      <div ref={contactRef} className="my-20">
+        <ContactPage></ContactPage>
       </div>
       <FooterPage></FooterPage>
     </div>

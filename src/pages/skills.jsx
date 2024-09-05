@@ -15,7 +15,7 @@ const SkillsPage = () => {
   };
 
   return (
-    <div className="w-full flex flex-col">
+    <div className="w-full flex flex-col min-h-screen">
       <Fade left duration={1000} delay={500}>
         <div className="w-full flex justify-center items-center mb-10">
           <h1

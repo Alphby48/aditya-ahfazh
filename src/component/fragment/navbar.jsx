@@ -6,7 +6,7 @@ import { useRef } from "react";
 import CommingSoon from "../element/comming";
 
 const NavbarPages = (props) => {
-  const { aboutRef, skillsRef } = props;
+  const { aboutRef, skillsRef, portfolioRef, contactRef } = props;
   const { isDarkMode, setIsDarkMode } = useContext(DarkMode);
   const [navbar, setNavbar] = useState(false);
   const [home, setHome] = useState(false);
@@ -80,9 +80,25 @@ const NavbarPages = (props) => {
     setNavbar(false);
   };
 
-  const handleComming = () => {
-    setIsComming(true);
+  const handlePortfolioScroller = () => {
+    window.scrollTo({
+      top: portfolioRef.current.offsetTop,
+      behavior: "smooth",
+    });
+    setNavbar(false);
   };
+
+  const handleContactScroller = () => {
+    window.scrollTo({
+      top: contactRef.current.offsetTop,
+      behavior: "smooth",
+    });
+    setNavbar(false);
+  };
+
+  // const handleComming = () => {
+  //   setIsComming(true);
+  // };
 
   return (
     <>
@@ -104,25 +120,37 @@ const NavbarPages = (props) => {
           ref={navRef}
         >
           <p
-            className="hover:text-red-200 transition ease-in duration-100 cursor-pointer"
+            className="hover:text-orange-400 transition ease-in duration-100 cursor-pointer"
             onClick={handleHomeScroller}
           >
             Home
           </p>
 
-          <p onClick={handleAboutScroler} className="cursor-pointer">
+          <p
+            onClick={handleAboutScroler}
+            className="cursor-pointer hover:text-orange-400 transition ease-in duration-100"
+          >
             About
           </p>
 
-          <p onClick={handleSkillsScroller} className="cursor-pointer">
+          <p
+            onClick={handleSkillsScroller}
+            className="cursor-pointer hover:text-orange-400 transition ease-in duration-100"
+          >
             Skills
           </p>
 
-          <p onClick={handleComming} className="cursor-pointer">
+          <p
+            onClick={handlePortfolioScroller}
+            className="cursor-pointer hover:text-orange-400 transition ease-in duration-100"
+          >
             Portfolio
           </p>
 
-          <p onClick={handleComming} className="cursor-pointer">
+          <p
+            onClick={handleContactScroller}
+            className="cursor-pointer hover:text-orange-400 transition ease-in duration-100"
+          >
             Contact
           </p>
 

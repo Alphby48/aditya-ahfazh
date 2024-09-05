@@ -9,7 +9,7 @@ const AboutPage = () => {
   const [iscomming, setIsComming] = useState(false);
 
   return (
-    <div className="w-full p-3 ">
+    <div className="w-full p-3 min-h-screen">
       <div className="w-full flex justify-around gap-4 max-sm:flex-col">
         <Fade left delay={500}>
           <div className="max-sm:w-full max-sm:flex max-sm:justify-center max-sm:items-center">
