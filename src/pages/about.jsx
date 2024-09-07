@@ -50,6 +50,7 @@ const AboutPage = () => {
               </button>
               <a
                 href="https://drive.google.com/file/d/1uB270hiP2jwGe_FxRxxuRfpc5asnOZgU/view?usp=drive_link"
+                target="_blank"
                 className="text-lg font-poppins p-3 border-2 border-orange-300 hover:bg-lime-300 hover:text-slate-50 active:bg-cyan-500 active:border-2 active:border-red-500 rounded-md text-orange-300"
               >
                 Download CV
