@@ -110,7 +110,7 @@ const NavbarPages = (props) => {
         }`}
       >
         <div className="w-1/2 sm:w-1/6 flex items-center gap-4">
-          <img src="/img/aditya.png" alt="" className="w-12" />
+          <img src="/img/aditya_informatika.png" alt="" className="w-12" />
           <h1 className="text-2xl text-white">Aditya</h1>
         </div>
         <div

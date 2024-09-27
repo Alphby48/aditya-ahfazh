@@ -54,7 +54,7 @@ const CertNetEach = () => {
             return (
               <Zoom>
                 <div
-                  className="flex flex-col p-3 items-center w-80 shadow-neor bg-gray-200 cursor-pointer"
+                  className="flex flex-col p-3 justify-center items-center w-80 shadow-neor bg-gray-200 cursor-pointer"
                   key={i}
                   onClick={handlePopUp(d.id)}
                 >
@@ -79,7 +79,9 @@ const CertNetEach = () => {
           ></i>
           <img
             src={isRes.length > 0 && isRes.map((d) => d.img)}
-            className="w-1/3 max-sm:w-5/6"
+            className={`${
+              isRes.length > 0 && isRes.map((d) => `w-${d.size}`)
+            } max-sm:w-5/6`}
             alt=""
           />
         </div>

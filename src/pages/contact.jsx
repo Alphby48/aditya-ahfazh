@@ -33,7 +33,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="w-full flex items-center flex-col min-h-screen">
+    <div className="w-full flex items-center flex-col min-h-screen p-3">
       <div className="w-full flex justify-center mb-8">
         <Fade left>
           <h1

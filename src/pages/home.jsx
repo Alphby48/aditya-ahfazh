@@ -95,7 +95,7 @@ const HomePages = () => {
               options={defaultOptions}
               className="hover:scale-[1.05] transition-transform duration-300 ease-out"
             >
-              <img src="/img/aditya.png" alt="" className="w-80" />
+              <img src="/img/aditya_informatika.png" alt="" className="w-80" />
             </Tilt>
           </div>
         </div>
